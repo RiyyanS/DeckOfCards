@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+
+public class Deck {
+
+	private ArrayList<String> pickUp = new 
+			ArrayList<String>();
+	
+	private ArrayList<String> drop = new 
+			ArrayList<String>();
+	
+	public Deck(){
+		System.out.println("Hello world, Deck");
+	}
+	
+	public void insertCard(String card){
+		//inserts a discarded card into the scrap deck
+		drop.add(card);
+		
+	}
+	
+	public String drawCard(){
+		//returns the first card on the deck
+		//if the deck is empty access "isEmpty()", "swapDecks()", "shuffle()"
+		
+		if(isEmpty() == true){
+			swapDecks();
+			shuffle();
+		}
+		
+		return pickUp.remove(0);
+	}
+	
+	public boolean isEmpty(){
+		//checks if deck size is empty
+		//will return true if the deck is empty
+		
+		if(pickUp.isEmpty()){
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public void swapDecks(){
+		//swaps the old deck for the new one
+		//shuffles the deck
+		
+		ArrayList<String> temp = drop;
+		drop = pickUp;
+		pickUp = temp;
+	}
+	
+	public void shuffle(){
+		//Using random, loop through the cards in the deck 
+		//swapping positions. Perform the loop three times 
+		//(simulating shuffling THREE times).
+		
+		
+		
+
+		
+	}
+	
+}
