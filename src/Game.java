@@ -7,9 +7,8 @@ public class Game {
 		System.out.println("Welcome to this card program");
 		
 		
-		
-		Player player = new Player();
 		Hand hand = new Hand();
+		Player player = new Player();
 		Deck deck = new Deck();
 	}
 

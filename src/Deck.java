@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
 
@@ -53,9 +55,13 @@ public class Deck {
 	}
 	
 	public void shuffle(){
-		//Using random, loop through the cards in the deck 									[progress]
-		//swapping positions. Perform the loop three times 									[progress]
-		//(simulating shuffling THREE times).												[progress]
+		//Using random, loop through the cards in the deck 									[done]
+		//swapping positions. Perform the loop three times 									[done]
+		//(simulating shuffling THREE times).												[done]
+		
+*
+		Collections.shuffle(drop);														//CHECK AFTER RUNNING PROGRAM,
+																						//MAY NEED TO ADD MORE TO THIS
 		
 		
 		
