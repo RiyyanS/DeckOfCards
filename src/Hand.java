@@ -1,21 +1,22 @@
 import java.util.ArrayList;
 //
 public class Hand {
-
+	
+	private Deck deck;
 	private ArrayList<String> hand = new ArrayList<String>();
 	
 	
 	public Hand(){ //stores the collection of cards
 		
 		System.out.println("Hello world, Hand");
-		
+		ArrayList<String> pickUp = deck.getPickUp();
 	}
 	
 	public void displayHand(){ 
 		//displays the players hand													[done]
 		//if the hand is empty display the message indicating so					[done]
 		
-		if (hand.size() == 0){
+		if (isEmpty() == true){
 			System.out.println("Your hand is empty");
 		}else{
 			for(int i = 0; i < hand.size(); i++){
@@ -26,18 +27,30 @@ public class Hand {
 	}
 	
 	public boolean isEmpty(){
-		// if the hand is empty return this value as true							[progress]
-		return false;
+		// if the hand is empty return this value as true							[done]
+		
+		if (hand.size() == 0){
+			return true;
+		}else
+			return false;
 	}
 	
 	public boolean isFull(){
-		// if the hand contains 5 cards return true									[progress]
-		return false;
+		// if the hand contains 5 cards return true									[done]
+		if (hand.size() == 5){
+			return true;
+		}else
+			return false;
+	
 	}
 	
-	public int addCard(){
+	public String addCard(){
 		//inserts card into the array of cards										[progress]
-		return 0;
+		
+		hand.add(pickUp(0));
+		pickUp.remove(0);
+		
+		return "";
 	}
 	
 	public int dropCard(){

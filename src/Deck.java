@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-
+import java.util.Collections;
+import java.util.Random;
 public class Deck {
 
 	private ArrayList<String> pickUp = new 
@@ -10,6 +11,17 @@ public class Deck {
 	
 	public Deck(){
 		System.out.println("Hello world, Deck");
+		pickUp = new ArrayList<String>();
+		drop = new ArrayList<String>();
+		
+	}
+	
+	public ArrayList<String> getPickUp(){
+		return pickUp;
+	}
+	
+	public ArrayList<String> getDrop(){
+		return drop;
 	}
 	
 	public void insertCard(String card){
@@ -57,7 +69,9 @@ public class Deck {
 		//swapping positions. Perform the loop three times 									[progress]
 		//(simulating shuffling THREE times).												[progress]
 		
-		
+		//Collections.shuffle(arg0, arg1);
+		Random rand = new Random();
+		rand.nextInt(52);
 		
 	}
 	
