@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//
+
 public class Player {
 	Scanner user_input = new Scanner(System.in);
 
@@ -9,14 +9,14 @@ public class Player {
 	}
 	
 	public String Player(){
-		//creates a player object with an empty hand and name *name*
+		//creates a player object with an empty hand and name *name*						[progress]
 		String name = "bob";
 		return name;
 	}
 	
 	public void displayHand(){
 		
-		//Display player's hand
+		//Display player's hand																[progress]	
 
 	}
 
@@ -38,20 +38,20 @@ public class Player {
 
 	public String pickup(){
 		String pickup = "1";
-		//Draw a card, display card to player, add card to player's hand
+		//Draw a card, display card to player, add card to player's hand					[progress]
 		return pickup;
 	}
 	
 	public String drop(){
 		String drop = "1";
-		//Allow the user to select which card they would like to drop, ensure that 
-		//the user selects a card they are holding.
+		//Allow the user to select which card they would like to drop, ensure that 			[progress]
+		//the user selects a card they are holding.											[progress]
 		return drop;		
 	}
 	
 	public boolean completeTurn(){
-		//Return true if the player's hand reaches the target through sum or product,
-		//otherwise false.
+		//Return true if the player's hand reaches the target through sum or product,		[progress]
+		//otherwise false.																	[progress]
 		return false;
 	}	
 }

@@ -1,41 +1,63 @@
+import java.util.ArrayList;
 
 public class Deck {
-//
+
+	private ArrayList<String> pickUp = new 
+			ArrayList<String>();
+	
+	private ArrayList<String> drop = new 
+			ArrayList<String>();
+	
 	public Deck(){
 		System.out.println("Hello world, Deck");
 	}
 	
-	public int insertCard(){
-		//inserts a discarded card into the scrap deck
-		return 0;
+	public void insertCard(String card){
+		//inserts a discarded card into the scrap deck										[done]
+		drop.add(card);
+		
 	}
 	
-	public int drawCard(){
-		//returns the first card on the deck
-		//if the deck is empty access "isEmpty()", "swapDecks()", "shuffle()"
+	public String drawCard(){
+		//returns the first card on the deck												[done]
+		//if the deck is empty access "isEmpty()", "swapDecks()", "shuffle()"				[done]
 		
-		return 0;
+		//if the normal deck is empty(true), then swap the decks, and shuffle the new one
+		if(isEmpty() == true){
+			swapDecks();
+			shuffle();
+		}
+		return pickUp.remove(0);
 	}
 	
 	public boolean isEmpty(){
-		//checks if deck size is empty
-		//will return true if the deck is empty
+		//checks if deck size is empty														[done]
+		//will return true if the deck is empty												[done]
+		
+		if(pickUp.isEmpty()){
+			return true;
+		}
 		
 		return false;
 	}
 	
 	public void swapDecks(){
-		//swaps the old deck for the new one
-		//shuffles the deck
+		//swaps the old deck for the new one												[done]
+		//shuffles the deck																	[done]
+		
+		//double check to see if this is a proper switching of array lists...
+		
+		ArrayList<String> temp = drop;
+		drop = pickUp;
+		pickUp = temp;
 	}
 	
 	public void shuffle(){
-		//Using random, loop through the cards in the deck 
-		//swapping positions. Perform the loop three times 
-		//(simulating shuffling three times).
+		//Using random, loop through the cards in the deck 									[progress]
+		//swapping positions. Perform the loop three times 									[progress]
+		//(simulating shuffling THREE times).												[progress]
 		
 		
-
 		
 	}
 	
