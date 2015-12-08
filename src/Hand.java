@@ -26,13 +26,21 @@ public class Hand {
 	}
 	
 	public boolean isEmpty(){
-		// if the hand is empty return this value as true							[progress]
-		return false;
+		// if the hand is empty return this value as true							[done]
+		
+		if (hand.size() == 0){
+			return true;
+		}else
+			return false;
 	}
 	
 	public boolean isFull(){
-		// if the hand contains 5 cards return true									[progress]
-		return false;
+		// if the hand contains 5 cards return true									[done]
+		
+		if (hand.size() == 5){
+			return true;
+		}else
+			return false;
 	}
 	
 	public int addCard(){

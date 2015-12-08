@@ -59,7 +59,7 @@ public class Deck {
 		//swapping positions. Perform the loop three times 									[done]
 		//(simulating shuffling THREE times).												[done]
 		
-*
+
 		Collections.shuffle(drop);														//CHECK AFTER RUNNING PROGRAM,
 																						//MAY NEED TO ADD MORE TO THIS
 		
