@@ -1,8 +1,17 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-
 public class Deck {
+	
+	
+	
+	private int[] cardValue = {11, 10, 9, 8, 7, 6, 5,
+							   4, 3, 2, 1};
+	
+	
+	private ArrayList<int[]> deck = new
+			ArrayList<int[]>(51);	
+	//(51) because the index starts at 0 not 1.
 
 	private ArrayList<String> pickUp = new 
 			ArrayList<String>();
@@ -12,6 +21,19 @@ public class Deck {
 	
 	public Deck(){
 		System.out.println("Hello world, Deck");
+		pickUp = new ArrayList<String>();
+		drop = new ArrayList<String>();
+		deck = new ArrayList<int[]>();
+		
+	}
+	
+	
+	public ArrayList<String> getPickUp(){
+		return pickUp;
+	}
+	
+	public ArrayList<String> getDrop(){
+		return drop;
 	}
 	
 	public void insertCard(String card){
@@ -59,12 +81,15 @@ public class Deck {
 		//swapping positions. Perform the loop three times 									[done]
 		//(simulating shuffling THREE times).												[done]
 		
-*
+
 		Collections.shuffle(drop);														//CHECK AFTER RUNNING PROGRAM,
 																						//MAY NEED TO ADD MORE TO THIS
 		
-		
+		//Collections.shuffle(arg0, arg1);
+		Random rand = new Random();
+		rand.nextInt(52);
 		
 	}
 	
 }
+

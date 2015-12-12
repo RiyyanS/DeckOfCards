@@ -9,6 +9,7 @@ public class Game {
 		
 		Hand hand = new Hand();
 		Player player = new Player();
+
 		Deck deck = new Deck();
 	}
 

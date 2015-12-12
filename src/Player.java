@@ -12,7 +12,7 @@ public class Player {
 		//creates a player object with an empty hand and name *name*						[progress]
 		System.out.println("Player 1 enter your name: ");
 		String name1 = user_input.nextLine();
-		
+
 		System.out.println("Player 2 enter your name: ");
 		String name2 = user_input.nextLine();
 		return Player();																	//CHECK THE 
@@ -31,6 +31,24 @@ public class Player {
 
 		return getName;
 	}
+	public String getNameTwo(){															//	[done]
+		String getNameTwo;
+		System.out.println("Enter your name: ");
+		getNameTwo = user_input.nextLine();
+
+		return getNameTwo;
+	}
+	
+	public boolean takeTurn(){
+		
+		
+		return false;
+		//pick up or drop a card
+		//empty draw
+		//full drop
+		//boolean indicating if players hand meets target
+	}
+	
 
 	public String pickUpOrDrop(){														//	[done]
 		String AddOrDrop;
