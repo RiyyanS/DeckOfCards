@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class Hand {
+public class HandTwo {
 	
 	private Deck deck = new Deck();
-	private ArrayList<Integer>  handOne = new ArrayList<Integer>(5);		//Hand One array
-
-////////////////////////////////////////////////////////////////CONSTRUCTOR////////////////////////////////////////////////////////////////////
+	private ArrayList<Integer>  handTwo = new ArrayList<Integer>(5);		//Hand Two array
+	
+////////////////////////////////////////////////////////////////CONSTRUCTOR/////////////////////////////////////////////////////
 	/****************************************************************
 	 * Name: Riyyan Sharrif & Anthony Tomaselli
 	 * Course: IOOP
@@ -31,13 +31,13 @@ public class Hand {
 	 * Expected Output:
 	 *                      
 	 ******************************************************************/
-	public Hand(){ //CONSTRUCCTOR
+	public HandTwo(){ 																			//stores the collection of cards
 		
 	}
-////////////////////////////////////////////////////////////////CONSTRUCTOR////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////CONSTRUCTOR/////////////////////////////////////////////////////
 	
-	public ArrayList<Integer> getHandOne() {	//gets HandOne  array for another class
-	       return handOne;
+	public ArrayList<Integer> getHandTwo() {													//gets HandTwo array for another class
+	       return handTwo;
 	}
 	
 	/****************************************************************
@@ -65,20 +65,19 @@ public class Hand {
 	 * Expected Output: ERROR;
 	 *                      
 	 ******************************************************************/
-	public void displayHand(){ 
+	public void displayHandTwo(){ 																//displays hand two
 		//displays the players hand
 		//if the hand is empty display the message indicating so
-		//addHandValue_one();
-		System.out.println(getHandOne()); //try and get this method to take the index parameter
 		
-		if(handOne.size() == 0){
+		System.out.println(getHandTwo());
+		
+		if(handTwo.size() == 0){
 			System.out.println("Your hand is empty!");
 		}
 		
-	}	
+	}
 	
-	
-////////////////////////////////////////////////////////////////Add||Drop//////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////Add||Drop///////////////////////////////////////////////////////////////////
 	/****************************************************************
 	 * Name: Riyyan Sharrif & Anthony Tomaselli
 	 * Course: IOOP
@@ -104,9 +103,9 @@ public class Hand {
 	 * Expected Output: ERROR;
 	 *                      
 	 ******************************************************************/	
-	public void addCardOne(){																				//adds card
-		int temp = deck.drawCardOne();
-		handOne.add(temp);
+	public void addCardTwo(){																	//adds card hand two
+		int temp = deck.drawCardTwo();
+		handTwo.add(temp);
 	}
 	/****************************************************************
 	 * Name: Riyyan Sharrif & Anthony Tomaselli
@@ -134,107 +133,87 @@ public class Hand {
 	 * Input: Q
 	 * Expected Output: ERROR;                      
 	 ******************************************************************/	
-	public void dropCardOne(){																				//drops card
-	
-		
-	}
-	
-	public void containsCard(){																				//returns index to drop or -1
-	
-		
-	}
-////////////////////////////////////////////////////////////////Add||Drop//////////////////////////////////////////////////////////////////////		
+	public void dropCardTwo(int index){															//drops card from hand two
+		//drop card at position i
+		//swap last card in array with dropped position
+		//
+		System.out.println();
 
+	}
 	
+	public void containsCard(){																	//checks to see if card is there
+		//return the index of card ?? why do we need this method
+	}
+////////////////////////////////////////////////////////////////Add||Drop///////////////////////////////////////////////////////////////////		
 	
-/////////////////////////////////////////////////////////////Sum And Product///////////////////////////////////////////////////////////////////		
-	
-	public int sum(){																						//fins sum of hand one
-		
+////////////////////////////////////////////////////////////////Sum And Product///////////////////////////////////////////////////////////////////	
+	/****************************************************************
+	 * Name: Riyyan Sharrif & Anthony Tomaselli
+	 * Course: IOOP
+	 * Section: 07
+	 * Date: 12/13/15
+	 ****************************************************************
+	 * ID: Lab# 7
+	 * Purpose: sumAndProduct – Using two output parameters calculate the sum and product of the hand. If the user holds an ace in their hand use aceValue to determine what they would like it to be represented by
+	 ****************************************************************
+	 * Test Suite:
+	 * **************************************************************
+	 * Normal Cases:
+	 * Input: sum / product of indexes
+	 * Expected Output: sum / product does not satisfy target number!
+	 *
+	 * Boundary Cases:
+	 * Input: sum / product of indexes
+	 * Expected Output: sum / product does satisfy target number!
+	 *
+	 *
+	 * Extreme Cases:
+	 * Input:
+	 * Expected Output:
+	 *                      
+	 ******************************************************************/
+	public int sum(){																			//checks sum of hand two
+
 		int sum = 0;
-		for(int i = 1; i < handOne.size(); i++){
-		    sum += handOne.get(i);
+		for(int i = 1; i < handTwo.size(); i++){
+			sum += handTwo.get(i);
 		}
-		
+
+		for(int j = 1; j < handTwo.size(); j++){
+			//	product*=handOne.get(j);
+		}
 		return sum;
 	}
-	
-	public int product(){																					//fins product of hand one
-
+	public int product(){																		//checks product of handtwo
+		
 		int product = 0;
-		for(int i = 1; i < handOne.size(); i++){
-			product *= handOne.get(i);
+		for(int i = 1; i < handTwo.size(); i++){
+			product *= handTwo.get(i);
 		}
 
+		for(int j = 1; j < handTwo.size(); j++){
+			//	product*=handOne.get(j);
+		}
 		return product;
 	}
+
+////////////////////////////////////////////////////////////////Sum And Product///////////////////////////////////////////////////////////////////
 	
-/////////////////////////////////////////////////////////////Sum And Product///////////////////////////////////////////////////////////////////		
-	
-	
-	/****************************************************************
-	 * Name: Riyyan Sharrif & Anthony Tomaselli
-	 * Course: IOOP
-	 * Section: 07
-	 * Date: 12/13/15
-	 ****************************************************************
-	 * ID: Lab# 7
-	 * Purpose: isEmpty – Returns true if the hand is empty, false otherwise.
-	 ****************************************************************
-	 * Test Suite:
-	 * **************************************************************
-	 * Normal Cases:
-	 * Input: if(hand.size() == 0)
-	 * Expected Output: return true;
-	 *
-	 * Boundary Cases:
-	 * Input: if(hand.size() == 0)
-	 * Expected Output: return true;
-	 *
-	 *
-	 * Extreme Cases:
-	 * Input: x
-	 * Expected Output: ERROR;
-	 *                      
-	 ******************************************************************/	
-	public boolean isEmpty(){																				//checks to see if hand is empty
+	public boolean isEmpty(){																	//checks to see if hand is empty
 		// if the hand is empty return this value as true
-		if(handOne.size() == 0){
-			return true;
-		}
-		return false;
-	}
-	/****************************************************************
-	 * Name: Riyyan Sharrif & Anthony Tomaselli
-	 * Course: IOOP
-	 * Section: 07
-	 * Date: 12/13/15
-	 ****************************************************************
-	 * ID: Lab# 7
-	 * Purpose: isFull – Returns true if the hand contains 5 cards, false otherwise.
-	 ****************************************************************
-	 * Test Suite:
-	 * **************************************************************
-	 * Normal Cases:
-	 * Input: if(hand.size() == 5)
-	 * Expected Output: return true;
-	 *
-	 * Boundary Cases:
-	 * Input: if(hand.size() == 5)
-	 * Expected Output: return true;
-	 *
-	 *
-	 * Extreme Cases:
-	 * Input: z
-	 * Expected Output: ERROR;
-	 *                      
-	 ******************************************************************/	
-	public boolean isFull(){																				//checks to see if hand is empty
-		// if the hand contains 5 cards return true	
-		if(handOne.size() == 5){
+		if(handTwo.size() == 0){
 			return true;
 		}
 		return false;
 	}
 	
+	public boolean isFull(){																	//checks to see if hand is empty
+		// if the hand contains 5 cards return true
+		if(handTwo.size() == 5){
+			return true;
+		}
+		return false;
+	}
+
+
 }
